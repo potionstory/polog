@@ -5,16 +5,16 @@ import { ListBoxStyle } from '../style/ListBox';
 
 class ListBox extends Component {
   state = { 
-    title: ["공지사항", "이벤트", "업데이트", "ETC"]
+    category: ["공지사항", "이벤트", "업데이트", "ETC"]
   };
 
   render() {
     return (
       <ListBoxStyle>
         <List component="nav">
-          {this.state.title.map((n, i) => {
+          {this.state.category.map((n, i) => {
             return (
-              <ListGroup onTitle={n} />
+              <ListGroup onCategory={n} />
             )
           })}
         </List>

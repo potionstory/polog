@@ -4,25 +4,22 @@ export const SideBoxStyle = styled.div`
   overflow-y:auto;
   width:300px;
   height:100%;
-  background-color: #424242;
+  padding-top:60px;
+  background-color: #2196f3;
+  box-sizing:border-box;
   h2 {
-    position:relative;
+    position:fixed;
+    top:0;
+    left:60px;
+    z-index:10;
+    width:273px;
     height:60px;
     padding:0 5px;
+    background-color:#2196f3;
     font-size:1.3125rem;
     font-weight:500;
     color:#fff;
     line-height:60px;
-    &:after {
-      position:absolute;
-      top:60px;
-      left:5px;
-      width:calc(100% - 10px);
-      height:1px;
-      background-color:#fff;
-      opacity:0.5;
-      content:'';
-    }
   }
   .intro {
     display:block;
@@ -34,7 +31,7 @@ export const SideBoxStyle = styled.div`
       background-color:#fff;
       border-radius:100px;
       font-size:100px;
-      color:#212121;
+      color:#2196f3;
       vertical-align:middle;
     }
   }

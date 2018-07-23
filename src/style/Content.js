@@ -6,5 +6,5 @@ export const ContentStyle = styled.div`
   overflow-y:auto;
   width:300px;
   height:100%;
-  background-color: #616161;
+  background-color: #fff;
 `;

@@ -18,10 +18,9 @@ export const ListBoxStyle = styled.div`
         height:24px;
         padding:0 5px;
         border-radius:12px;
-        background-color:#FFC107;
+        background-color:#1769aa;
         font-size:0.75rem;
-        font-weight:bold;
-        color:#212121;
+        color:#fff;
         line-height:24px;
         text-align:center;
       }
