@@ -7,7 +7,7 @@ export const TabMenuStyle = styled.div`
       float:left;
       > button {
         height:60px;
-        padding-right:70px;
+        padding-right:56px;
         border-radius:0;
         background-color:#424242;
         font-size:1rem;
@@ -28,22 +28,20 @@ export const TabMenuStyle = styled.div`
           position:absolute;
           top:50%;
           right:16px;
-          width:20px;
-          height:20px;
+          width:24px;
+          height:24px;
           min-height:20px;
-          margin-top:-10px;
+          margin-top:-12px;
           padding:0;
           border:0;
-          border-radius:10px;
           background-color:transparent;
           color:#fff;
           cursor:pointer;
           &:hover {
-            background-color:#fff;
-            color:#212121;
+            color:#FFC107;
           }
           svg {
-            font-size:1.2rem;
+            font-size:24px;
             font-weight:bold;
             margin-right:0;
             vertical-align:middle;

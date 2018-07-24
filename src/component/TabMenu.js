@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import SubtitlesIcon from '@material-ui/icons/Subtitles';
-import CloseIcon from '@material-ui/icons/Close';
+import CancelIcon from '@material-ui/icons/Cancel';
 import { withStyles } from '@material-ui/core/styles';
 import { TabMenuStyle } from '../style/TabMenu';
 
@@ -35,13 +35,28 @@ const TabMenu = (props) => {
           <Button variant="contained">
             <SubtitlesIcon />
             공지사항1
-            <button type="button"><CloseIcon /></button>
+            <button type="button"><CancelIcon /></button>
           </Button>
         </li>
         <li>
           <Button variant="contained">
             <SubtitlesIcon />
-            공지사항1
+            공지사항2
+            <button type="button"><CancelIcon /></button>
+          </Button>
+        </li>
+        <li>
+          <Button variant="contained">
+            <SubtitlesIcon />
+            공지사항3
+            <button type="button"><CancelIcon /></button>
+          </Button>
+        </li>
+        <li>
+          <Button variant="contained">
+            <SubtitlesIcon />
+            공지사항4
+            <button type="button"><CancelIcon /></button>
           </Button>
         </li>
       </ul>
