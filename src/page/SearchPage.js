@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../component/Layout';
 import SideBox from '../component/SideBox';
-import Content from '../component/Content';
+import ContentBox from '../component/ContentBox';
 import SearchSide from '../component/SearchSide';
 
 const SearchPage = () => {
@@ -10,7 +10,7 @@ const SearchPage = () => {
       <SideBox title="SEARCH">
         <SearchSide />
       </SideBox>
-      <Content />
+      <ContentBox />
     </Layout>
   )
 };

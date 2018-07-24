@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../component/Layout';
 import SideBox from '../component/SideBox';
-import Content from '../component/Content';
+import ContentBox from '../component/ContentBox';
 import PologSide from '../component/PologSide';
 
 const HomePage = () => {
@@ -10,7 +10,9 @@ const HomePage = () => {
       <SideBox title="POLOG">
         <PologSide />
       </SideBox>
-      <Content />
+      <ContentBox>
+        Polog
+      </ContentBox>
     </Layout>
   )
 };

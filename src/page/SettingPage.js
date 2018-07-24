@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../component/Layout';
 import SideBox from '../component/SideBox';
-import Content from '../component/Content';
+import ContentBox from '../component/ContentBox';
 import SettingSide from '../component/SettingSide';
 
 const SettingPage = () => {
@@ -10,7 +10,7 @@ const SettingPage = () => {
       <SideBox title="SETTING">
         <SettingSide />
       </SideBox>
-      <Content />
+      <ContentBox />
     </Layout>
   )
 };

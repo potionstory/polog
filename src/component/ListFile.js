@@ -39,9 +39,7 @@ class ListFile extends Component {
   state = { 
     open: false,
     anchorEl: null,
-    tags: [
-
-    ]
+    tags: ["#가", "#가나", "#가나다", "#가나다라", "#가나다라마", "#가나다라마바", "#ABC", "#ABCDE", "#ABCDEFG"]
   };
 
   handleClick = () => {
@@ -73,12 +71,12 @@ class ListFile extends Component {
         <ListItemText inset primary={this.props.onTitle} />
         <MoreVertIcon 
           aria-label="More"
-          aria-owns={anchorEl ? 'long-menu' : null}
+          aria-owns={anchorEl ? 'file_info' : null}
           aria-haspopup="true"
           onClick={this.handleOver}
         />
         <Popover
-          id="long-menu"
+          id="file_info"
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClick={this.handleClose}
@@ -130,15 +128,11 @@ class ListFile extends Component {
               <ListItemText primary="Tag" />
             </ListItem>
             <li className={classes.tags}>
-              <Chip className={classes.tag} label="#가" onDelete={this.handleDelete} />
-              <Chip className={classes.tag} label="#가나" onDelete={this.handleDelete} />
-              <Chip className={classes.tag} label="#가나다" onDelete={this.handleDelete} />
-              <Chip className={classes.tag} label="#가나다라" onDelete={this.handleDelete} />
-              <Chip className={classes.tag} label="#가나다라마" onDelete={this.handleDelete} />
-              <Chip className={classes.tag} label="#가나다라마바" onDelete={this.handleDelete} />
-              <Chip className={classes.tag} label="#ABC" onDelete={this.handleDelete} />
-              <Chip className={classes.tag} label="#ABCDE" onDelete={this.handleDelete} />
-              <Chip className={classes.tag} label="#ABCDEFG" onDelete={this.handleDelete} />
+              {this.state.tags.map((n, i) => {
+                return (
+                  <Chip className={classes.tag} label={n} onDelete={this.handleDelete} />
+                )
+              })}
             </li>
           </List>
         </Popover>

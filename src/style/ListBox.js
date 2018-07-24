@@ -10,7 +10,10 @@ export const ListBoxStyle = styled.div`
         color:#fff;
       }
       span {
+        overflow:hidden;
         color:#fff;
+        text-overflow:ellipsis;
+        white-space:nowrap;
       }
       .num {
         display:inline-block;

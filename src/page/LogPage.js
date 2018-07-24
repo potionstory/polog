@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../component/Layout';
 import SideBox from '../component/SideBox';
-import Content from '../component/Content';
+import ContentBox from '../component/ContentBox';
 import LogSide from '../component/LogSide';
 
 const LogPage = () => {
@@ -10,7 +10,7 @@ const LogPage = () => {
       <SideBox title="LOG">
         <LogSide />
       </SideBox>
-      <Content />
+      <ContentBox />
     </Layout>
   )
 };

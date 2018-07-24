@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../component/Layout';
 import SideBox from '../component/SideBox';
-import Content from '../component/Content';
+import ContentBox from '../component/ContentBox';
 import LoginSide from '../component/LoginSide';
 
 const LoginPage = () => {
@@ -10,7 +10,7 @@ const LoginPage = () => {
       <SideBox title="LOGIN">
         <LoginSide />
       </SideBox>
-      <Content />
+      <ContentBox />
     </Layout>
   )
 };

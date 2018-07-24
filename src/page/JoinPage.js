@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../component/Layout';
 import SideBox from '../component/SideBox';
-import Content from '../component/Content';
+import ContentBox from '../component/ContentBox';
 import JoinSide from '../component/JoinSide';
 
 const JoinPage = () => {
@@ -10,7 +10,7 @@ const JoinPage = () => {
       <SideBox title="JOIN">
         <JoinSide />
       </SideBox>
-      <Content />
+      <ContentBox />
     </Layout>
   )
 };
