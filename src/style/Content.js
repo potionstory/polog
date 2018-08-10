@@ -1,0 +1,8 @@
+import styled from "styled-components";
+
+export const ContentStyle = styled.div`
+  -webkit-flex: 1;
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+`;
