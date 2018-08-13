@@ -151,6 +151,12 @@ class Header extends Component {
             </ListItem>
             <ListItem button>
               <ListItemIcon>
+                <DescriptionIcon />
+              </ListItemIcon>
+              <ListItemText inset primary="Q&A" />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
                 <SearchIcon />
               </ListItemIcon>
               <ListItemText inset primary="SEARCH" />
