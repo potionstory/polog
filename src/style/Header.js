@@ -1,49 +1,77 @@
 import styled from "styled-components";
 import { ColorSet } from "./ColorSet";
 
-console.log(ColorSet);
 export const HeaderStyle = styled.div`
+  overflow-y: auto;
   position: relative;
   width: 200px;
-  padding: 10px;
+  height: 100%;
+  background-color: ${ColorSet.darkGray};
   .UserBox {
     padding: 10px;
-    border-radius: 10px;
-    background-color: ${ColorSet.darkGray};
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     .Circle {
       position: relative;
       text-align: center;
+      cursor: pointer;
       .logo {
         display: inline-block;
-        overflow: hidden;
         position: relative;
         z-index: 10;
-        border-radius: 100px;
         img {
+          border-radius: 100px;
           vertical-align: top;
-          opacity: 0.8;
           transition: opacity 300ms;
+          opacity: 0.6;
           cursor: pointer;
-          &:hover {
-            opacity: 1;
-          }
         }
         button {
           width: 150px;
           height: 150px;
           margin: 0;
-          color: ${ColorSet.white};
-          background-color: ${ColorSet.white};
-          opacity: 0.6;
+          background-color: ${ColorSet.lightBlue};
           transition: opacity 300ms;
-          &:hover {
-            opacity: 1;
-          }
+          opacity: 0.6;
           svg {
             font-size: 100px;
-            color: ${ColorSet.darkGray};
+            color: ${ColorSet.white};
           }
+        }
+      }
+      .setting,
+      .noti {
+        display: none;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        width: 32px;
+        height: 32px;
+        margin-top: -16px;
+        background-color: ${ColorSet.white};
+        color: ${ColorSet.darkGray};
+        svg {
+          opacity: 0.6;
+          transition: opacity 300ms;
+        }
+        &:hover {
+          svg {
+            opacity: 1;
+          }
+        }
+      }
+      .setting {
+        left: 0;
+      }
+      .noti {
+        right: 0;
+      }
+      &:hover {
+        .setting,
+        .noti {
+          display: block;
+        }
+        button,
+        img {
+          opacity: 1;
         }
       }
     }
@@ -51,6 +79,18 @@ export const HeaderStyle = styled.div`
       margin-top: 10px;
       position: relative;
       text-align: center;
+      h2 {
+        overflow: hidden;
+        height: 48px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-style: italic;
+        color: ${ColorSet.white};
+        line-height: 48px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        cursor: pointer;
+      }
       .Buttons {
         button {
           display: block;
@@ -69,6 +109,11 @@ export const HeaderStyle = styled.div`
           svg {
             vertical-align: top;
           }
+        }
+      }
+      .Out {
+        h2 {
+          padding-bottom: 10px;
         }
       }
       .In {
@@ -101,10 +146,17 @@ export const HeaderStyle = styled.div`
             padding: 5px;
             li {
               float: left;
-              width: 50%;
+              width: calc(50% - 10px);
               height: 48px;
               margin-top: 10px;
+              padding: 0 5px;
               line-height: 48px;
+              .MuiChip-root-24 {
+                width: 100%;
+                justify-content: left;
+                font-family: "Spoqa Han Sans";
+                font-weight: 600;
+              }
               svg {
                 color: ${ColorSet.white};
               }
@@ -144,6 +196,20 @@ export const HeaderStyle = styled.div`
           display: block;
           padding-top: 58px;
         }
+      }
+    }
+  }
+  .MenuBox {
+    margin-top: 10px;
+    color: #fff;
+    nav {
+      span {
+        font-family: "Spoqa Han Sans";
+        font-size: 14px;
+        color: #fff;
+      }
+      svg {
+        color: #fff;
       }
     }
   }
