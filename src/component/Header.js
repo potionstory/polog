@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import IconButton from "@material-ui/core/IconButton";
+import Chip from "@material-ui/core/Chip";
+import Avatar from "@material-ui/core/Avatar";
 import OpacityIcon from "@material-ui/icons/Opacity";
 import FaceIcon from "@material-ui/icons/Face";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import BookmarkIcon from "@material-ui/icons/Bookmark";
+import DescriptionIcon from "@material-ui/icons/Description";
+import SmsIcon from "@material-ui/icons/Sms";
 import Button from "@material-ui/core/Button";
 import { HeaderStyle } from "../style/Header";
 
@@ -16,7 +21,6 @@ class Header extends Component {
   };
 
   render() {
-    const { classes } = this.props;
     return (
       <HeaderStyle>
         <div className="UserBox">
@@ -25,28 +29,82 @@ class Header extends Component {
               <IconButton>
                 <OpacityIcon />
               </IconButton>
-              {/* <img src="http://placehold.it/200x200" /> 유저 이미지 */}
+              {/* <img src="http://placehold.it/150x150" /> 유저 이미지 */}
             </div>
-            <CircularProgress
-              className="Progress"
-              size={220}
-              thickness={2}
-              variant="static"
-              value={this.state.completed}
-            />
+          </div>
+          <div className="SignMenu">
+            {/* <div class="Out">
+              <span class="Buttons">
+                <Button size="small" variant="extendedFab">
+                  <FaceIcon />
+                  &nbsp; SIGN IN
+                </Button>
+                <Button size="small" variant="extendedFab">
+                  <OpacityIcon />
+                  &nbsp; SIGN UP
+                </Button>
+              </span>
+            </div> */}
+            <div className="In">
+              <div className="Detail">
+                <h2>potionstory</h2>
+                <ul className="InfoList">
+                  <li className="Favorite">
+                    <Chip
+                      avatar={
+                        <Avatar>
+                          <FavoriteIcon />
+                        </Avatar>
+                      }
+                      label={999}
+                    />
+                  </li>
+                  <li className="BookMark">
+                    <Chip
+                      avatar={
+                        <Avatar>
+                          <BookmarkIcon />
+                        </Avatar>
+                      }
+                      label={999}
+                    />
+                    &nbsp;166
+                  </li>
+                  <li className="Descript">
+                    <Chip
+                      avatar={
+                        <Avatar>
+                          <DescriptionIcon />
+                        </Avatar>
+                      }
+                      label={999}
+                    />
+                  </li>
+                  <li className="Commnet">
+                    <Chip
+                      avatar={
+                        <Avatar>
+                          <SmsIcon />
+                        </Avatar>
+                      }
+                      label={999}
+                    />
+                  </li>
+                </ul>
+              </div>
+              <span class="Buttons">
+                <Button size="small" variant="extendedFab">
+                  <FaceIcon />
+                  &nbsp; SIGN OUT
+                </Button>
+                <Button size="small" variant="extendedFab">
+                  <OpacityIcon />
+                  &nbsp; LEAVE
+                </Button>
+              </span>
+            </div>
           </div>
         </div>
-        <div className="SignMenu">
-          <Button size="">
-            <FaceIcon />
-            &nbsp; SIGN IN
-          </Button>
-          <Button size="">
-            <OpacityIcon />
-            &nbsp; SIGN UP
-          </Button>
-        </div>
-        <div className="Menu" />
       </HeaderStyle>
     );
   }
