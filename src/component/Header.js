@@ -133,49 +133,37 @@ class Header extends Component {
           <List component="nav">
             <ListItem button>
               <ListItemIcon>
-                <Avatar>
-                  <OpacityIcon />
-                </Avatar>
+                <OpacityIcon />
               </ListItemIcon>
               <ListItemText inset primary="HOME" />
             </ListItem>
             <ListItem button>
               <ListItemIcon>
-                <Avatar>
-                  <FaceIcon />
-                </Avatar>
+                <FaceIcon />
               </ListItemIcon>
               <ListItemText inset primary="ABOUT" />
             </ListItem>
             <ListItem button>
               <ListItemIcon>
-                <Avatar>
-                  <DescriptionIcon />
-                </Avatar>
+                <DescriptionIcon />
               </ListItemIcon>
               <ListItemText inset primary="POLOG" />
             </ListItem>
             <ListItem button>
               <ListItemIcon>
-                <Avatar>
-                  <SearchIcon />
-                </Avatar>
+                <SearchIcon />
               </ListItemIcon>
               <ListItemText inset primary="SEARCH" />
             </ListItem>
             <ListItem button>
               <ListItemIcon>
-                <Avatar>
-                  <GradeIcon />
-                </Avatar>
+                <GradeIcon />
               </ListItemIcon>
               <ListItemText inset primary="STATUS" />
             </ListItem>
             <ListItem button>
               <ListItemIcon>
-                <Avatar>
-                  <HelpIcon />
-                </Avatar>
+                <HelpIcon />
               </ListItemIcon>
               <ListItemText inset primary="HELP" />
             </ListItem>
