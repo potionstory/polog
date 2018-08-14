@@ -1,44 +1,85 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import IconButton from "@material-ui/core/IconButton";
 import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
 import OpacityIcon from "@material-ui/icons/Opacity";
 import SettingsIcon from "@material-ui/icons/Settings";
 import NotiIcon from "@material-ui/icons/Notifications";
 import FaceIcon from "@material-ui/icons/Face";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
-import DescriptionIcon from "@material-ui/icons/Description";
+import DescriptIcon from "@material-ui/icons/Description";
 import SmsIcon from "@material-ui/icons/Sms";
 import Button from "@material-ui/core/Button";
-import { HeaderStyle } from "../style/Header";
-
-import ListSubheader from "@material-ui/core/ListSubheader";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import Collapse from "@material-ui/core/Collapse";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import DraftsIcon from "@material-ui/icons/Drafts";
-import SendIcon from "@material-ui/icons/Send";
-import ExpandLess from "@material-ui/icons/ExpandLess";
-import ExpandMore from "@material-ui/icons/ExpandMore";
-import StarBorder from "@material-ui/icons/StarBorder";
+import VoteIcon from "@material-ui/icons/Beenhere";
 import SearchIcon from "@material-ui/icons/Search";
 import GradeIcon from "@material-ui/icons/Grade";
 import HelpIcon from "@material-ui/icons/Help";
+import { HeaderStyle } from "../style/Header";
+import * as authActions from "../store/modules/Auth";
 
 class Header extends Component {
   state = {
-    completed: 25
+    active: 0,
+    menu: [
+      {
+        name: "HOME",
+        route: "/home",
+        icon: <OpacityIcon />
+      },
+      {
+        name: "ABOUT",
+        route: "/about",
+        icon: <FaceIcon />
+      },
+      {
+        name: "POLOG",
+        route: "/polog",
+        icon: <DescriptIcon />
+      },
+      {
+        name: "VOTE",
+        route: "/vote",
+        icon: <VoteIcon />
+      },
+      {
+        name: "SEARCH",
+        route: "/search",
+        icon: <SearchIcon />
+      },
+      {
+        name: "STATUS",
+        route: "/status",
+        icon: <GradeIcon />
+      },
+      {
+        name: "HELP",
+        route: "/help",
+        icon: <HelpIcon />
+      }
+    ]
   };
 
   handleOver = () => {
     console.log("over");
   };
 
+  handleMenu = (e, i) => {
+    const { AuthActions } = this.props;
+
+    AuthActions.gnbChange(i);
+  };
+
   render() {
+    const { menu } = this.state;
+    const { gnbIndex } = this.props;
     return (
       <HeaderStyle>
         <div className="UserBox">
@@ -49,7 +90,7 @@ class Header extends Component {
               </IconButton>
               {/* <img src="http://placehold.it/150x150" /> 유저 이미지 */}
             </div>
-            <IconButton mini className="setting">
+            <IconButton className="setting">
               <SettingsIcon />
             </IconButton>
             <IconButton className="noti">
@@ -57,14 +98,14 @@ class Header extends Component {
             </IconButton>
           </div>
           <div className="SignMenu">
-            {/* <div class="Out">
+            {/* <div className="Out">
               <h2>POLOG</h2>
-              <span class="Buttons">
-                <Button size="small" variant="extendedFab">
+              <span className="Buttons">
+                <Button size="small" variant="contained">
                   <FaceIcon />
                   &nbsp; SIGN IN
                 </Button>
-                <Button size="small" variant="extendedFab">
+                
                   <OpacityIcon />
                   &nbsp; SIGN UP
                 </Button>
@@ -98,7 +139,7 @@ class Header extends Component {
                     <Chip
                       avatar={
                         <Avatar>
-                          <DescriptionIcon />
+                          <DescriptIcon />
                         </Avatar>
                       }
                       label={99}
@@ -116,12 +157,12 @@ class Header extends Component {
                   </li>
                 </ul>
               </div>
-              <span class="Buttons">
-                <Button size="small" variant="extendedFab">
+              <span className="Buttons">
+                <Button size="small" variant="contained">
                   <FaceIcon />
                   &nbsp; SIGN OUT
                 </Button>
-                <Button size="small" variant="extendedFab">
+                <Button size="small" variant="contained">
                   <OpacityIcon />
                   &nbsp; LEAVE
                 </Button>
@@ -131,42 +172,22 @@ class Header extends Component {
         </div>
         <div className="MenuBox">
           <List component="nav">
-            <ListItem button>
-              <ListItemIcon>
-                <OpacityIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="HOME" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <FaceIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="ABOUT" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <DescriptionIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="POLOG" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <SearchIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="SEARCH" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <GradeIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="STATUS" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <HelpIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="HELP" />
-            </ListItem>
+            {menu.map((m, i) => {
+              return (
+                <Link
+                  to={m.route}
+                  key={i}
+                  index={i}
+                  className={gnbIndex == i ? m.name + " active" : m.name}
+                  onClick={e => this.handleMenu(e, i)}
+                >
+                  <ListItem>
+                    <ListItemIcon>{m.icon}</ListItemIcon>
+                    <ListItemText inset primary={m.name} />
+                  </ListItem>
+                </Link>
+              );
+            })}
           </List>
         </div>
       </HeaderStyle>
@@ -174,4 +195,19 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const mapStateToProps = state => {
+  return {
+    gnbIndex: state.Auth.gnbIndex
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    AuthActions: bindActionCreators(authActions, dispatch)
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header);

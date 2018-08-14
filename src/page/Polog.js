@@ -1,18 +1,18 @@
 import React from "react";
 import Layout from "../component/Layout";
-import HomeSide from "../container/Side/Home";
+import PologSide from "../container/Side/Polog";
 import Content from "../component/Content";
 import { SideStyle } from "../style/Side";
 
-const Home = () => {
+const Polog = () => {
   return (
     <Layout>
-      <SideStyle style={{ backgroundColor: "#2196f3" }}>
-        <HomeSide />
+      <SideStyle style={{ backgroundColor: "#8bc34a" }}>
+        <PologSide />
       </SideStyle>
-      <Content>HOME</Content>
+      <Content>Polog</Content>
     </Layout>
   );
 };
 
-export default Home;
+export default Polog;

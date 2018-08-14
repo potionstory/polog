@@ -1,18 +1,18 @@
 import React from "react";
 import Layout from "../component/Layout";
-import HomeSide from "../container/Side/Home";
+import SearchSide from "../container/Side/Search";
 import Content from "../component/Content";
 import { SideStyle } from "../style/Side";
 
-const Home = () => {
+const Search = () => {
   return (
     <Layout>
-      <SideStyle style={{ backgroundColor: "#2196f3" }}>
-        <HomeSide />
+      <SideStyle style={{ backgroundColor: "#3f51b5" }}>
+        <SearchSide />
       </SideStyle>
-      <Content>HOME</Content>
+      <Content>Search</Content>
     </Layout>
   );
 };
 
-export default Home;
+export default Search;

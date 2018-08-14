@@ -1,18 +1,18 @@
 import React from "react";
 import Layout from "../component/Layout";
-import HomeSide from "../container/Side/Home";
+import AboutSide from "../container/Side/About";
 import Content from "../component/Content";
 import { SideStyle } from "../style/Side";
 
-const Home = () => {
+const About = () => {
   return (
     <Layout>
-      <SideStyle style={{ backgroundColor: "#2196f3" }}>
-        <HomeSide />
+      <SideStyle style={{ backgroundColor: "#f44336" }}>
+        <AboutSide />
       </SideStyle>
-      <Content>HOME</Content>
+      <Content>About</Content>
     </Layout>
   );
 };
 
-export default Home;
+export default About;

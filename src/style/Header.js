@@ -28,7 +28,7 @@ export const HeaderStyle = styled.div`
           width: 150px;
           height: 150px;
           margin: 0;
-          background-color: ${ColorSet.lightBlue};
+          background-color: ${ColorSet.blue};
           transition: opacity 300ms;
           opacity: 0.6;
           svg {
@@ -82,7 +82,7 @@ export const HeaderStyle = styled.div`
       h2 {
         overflow: hidden;
         height: 48px;
-        font-size: 1.5rem;
+        font-size: 20px;
         font-weight: bold;
         font-style: italic;
         color: ${ColorSet.white};
@@ -97,14 +97,16 @@ export const HeaderStyle = styled.div`
           width: 100%;
           margin-top: 10px;
           font-family: "Spoqa Han Sans";
-          font-size: 1rem;
-          font-weight: 600;
+          font-size: 14px;
           background-color: ${ColorSet.gray};
           box-shadow: none;
           color: ${ColorSet.white};
           opacity: 0.6;
           &:hover {
             opacity: 1;
+          }
+          span {
+            line-height: 24px;
           }
           svg {
             vertical-align: top;
@@ -125,11 +127,11 @@ export const HeaderStyle = styled.div`
           left: 0;
           z-index: 10;
           width: 100%;
-          border-radius: 10px;
+          border-radius: 4px;
           h2 {
             overflow: hidden;
             height: 48px;
-            font-size: 1.5rem;
+            font-size: 20px;
             font-weight: bold;
             font-style: italic;
             color: ${ColorSet.white};
@@ -143,14 +145,14 @@ export const HeaderStyle = styled.div`
             overflow: hidden;
             position: relative;
             background-color: ${ColorSet.white};
-            padding: 5px;
+            padding: 6px 5px;
             li {
               float: left;
               width: calc(50% - 10px);
-              height: 48px;
-              margin-top: 10px;
+              height: 32px;
+              margin: 5px 0;
               padding: 0 5px;
-              line-height: 48px;
+              line-height: 38px;
               .MuiChip-root-24 {
                 width: 100%;
                 justify-content: left;
@@ -163,22 +165,22 @@ export const HeaderStyle = styled.div`
             }
             .Favorite {
               .MuiChip-avatar-27 {
-                background-color: ${ColorSet.lightRed};
+                background-color: ${ColorSet.red};
               }
             }
             .BookMark {
               .MuiChip-avatar-27 {
-                background-color: ${ColorSet.lightYellow};
+                background-color: ${ColorSet.yellow};
               }
             }
             .Descript {
               .MuiChip-avatar-27 {
-                background-color: ${ColorSet.lightBlue};
+                background-color: ${ColorSet.blue};
               }
             }
             .Commnet {
               .MuiChip-avatar-27 {
-                background-color: ${ColorSet.lightGreen};
+                background-color: ${ColorSet.green};
               }
             }
           }
@@ -194,22 +196,62 @@ export const HeaderStyle = styled.div`
         }
         .Buttons {
           display: block;
-          padding-top: 58px;
+          padding-top: 48px;
         }
       }
     }
   }
   .MenuBox {
     margin-top: 10px;
-    color: #fff;
+    color: ${ColorSet.white};
     nav {
-      span {
-        font-family: "Spoqa Han Sans";
-        font-size: 14px;
-        color: #fff;
+      > a {
+        display: block;
+        opacity: 0.6;
+        text-decoration: none;
+        &:hover {
+          opacity: 1;
+        }
+        span {
+          font-family: "Spoqa Han Sans";
+          font-size: 14px;
+          color: ${ColorSet.white};
+        }
+        svg {
+          color: ${ColorSet.white};
+        }
       }
-      svg {
-        color: #fff;
+      .active {
+        opacity: 1;
+        span,
+        svg {
+          color: ${ColorSet.white};
+        }
+      }
+      .HOME.active {
+        background-color: ${ColorSet.blue};
+      }
+      .ABOUT.active {
+        background-color: ${ColorSet.red};
+      }
+      .POLOG.active {
+        background-color: ${ColorSet.green};
+      }
+      .VOTE.active {
+        background-color: ${ColorSet.orange};
+      }
+      .SEARCH.active {
+        background-color: ${ColorSet.indigo};
+      }
+      .STATUS.active {
+        background-color: ${ColorSet.yellow};
+        span,
+        svg {
+          color: ${ColorSet.darkGray};
+        }
+      }
+      .HELP.active {
+        background-color: ${ColorSet.purple};
       }
     }
   }

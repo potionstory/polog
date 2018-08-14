@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export const ColorSet = {
   white: "#fff",
-  gray: "#515254",
   darkGray: "#2d2e30",
+  gray: "#515254",
   lightGray: "#7f8082",
-  lightRed: "#ff5252",
-  lightYellow: "#ecc528",
-  lightBlue: "#448aff",
-  lightGreen: "#55cc29"
+  red: "#f44336",
+  orange: "#ff9800",
+  yellow: "#ffd600",
+  green: "#8bc34a",
+  blue: "#2196f3",
+  indigo: "#3f51b5",
+  purple: "#9c27b0"
 };
