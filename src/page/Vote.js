@@ -7,7 +7,7 @@ import { SideStyle } from "../style/Side";
 const Vote = () => {
   return (
     <Layout>
-      <SideStyle style={{ backgroundColor: "#ff9800" }}>
+      <SideStyle className="vote">
         <VoteSide />
       </SideStyle>
       <Content>Vote</Content>

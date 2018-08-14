@@ -7,7 +7,7 @@ import { SideStyle } from "../style/Side";
 const Search = () => {
   return (
     <Layout>
-      <SideStyle style={{ backgroundColor: "#3f51b5" }}>
+      <SideStyle className="search">
         <SearchSide />
       </SideStyle>
       <Content>Search</Content>

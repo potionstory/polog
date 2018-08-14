@@ -7,9 +7,9 @@ export const HeaderStyle = styled.div`
   width: 200px;
   height: 100%;
   background-color: ${ColorSet.darkGray};
-  .UserBox {
+  .userBox {
     padding: 10px;
-    .Circle {
+    .circle {
       position: relative;
       text-align: center;
       cursor: pointer;
@@ -75,7 +75,7 @@ export const HeaderStyle = styled.div`
         }
       }
     }
-    .SignMenu {
+    .signMenu {
       margin-top: 10px;
       position: relative;
       text-align: center;
@@ -91,7 +91,7 @@ export const HeaderStyle = styled.div`
         text-overflow: ellipsis;
         cursor: pointer;
       }
-      .Buttons {
+      .buttons {
         button {
           display: block;
           width: 100%;
@@ -113,14 +113,14 @@ export const HeaderStyle = styled.div`
           }
         }
       }
-      .Out {
+      .out {
         h2 {
           padding-bottom: 10px;
         }
       }
-      .In {
+      .in {
         position: relative;
-        .Detail {
+        .detail {
           overflow: hidden;
           position: absolute;
           top: 0;
@@ -140,7 +140,7 @@ export const HeaderStyle = styled.div`
             text-overflow: ellipsis;
             cursor: pointer;
           }
-          .InfoList {
+          .infolist {
             display: none;
             overflow: hidden;
             position: relative;
@@ -163,22 +163,22 @@ export const HeaderStyle = styled.div`
                 color: ${ColorSet.white};
               }
             }
-            .Favorite {
+            .favorite {
               .MuiChip-avatar-27 {
                 background-color: ${ColorSet.red};
               }
             }
-            .BookMark {
+            .bookmark {
               .MuiChip-avatar-27 {
                 background-color: ${ColorSet.yellow};
               }
             }
-            .Descript {
+            .descript {
               .MuiChip-avatar-27 {
                 background-color: ${ColorSet.blue};
               }
             }
-            .Commnet {
+            .commnet {
               .MuiChip-avatar-27 {
                 background-color: ${ColorSet.green};
               }
@@ -189,19 +189,19 @@ export const HeaderStyle = styled.div`
             h2 {
               color: ${ColorSet.darkGray};
             }
-            .InfoList {
+            .infolist {
               display: block;
             }
           }
         }
-        .Buttons {
+        .buttons {
           display: block;
           padding-top: 48px;
         }
       }
     }
   }
-  .MenuBox {
+  .menubox {
     margin-top: 10px;
     color: ${ColorSet.white};
     nav {
@@ -216,6 +216,7 @@ export const HeaderStyle = styled.div`
           font-family: "Spoqa Han Sans";
           font-size: 14px;
           color: ${ColorSet.white};
+          text-transform: uppercase;
         }
         svg {
           color: ${ColorSet.white};
@@ -228,29 +229,29 @@ export const HeaderStyle = styled.div`
           color: ${ColorSet.white};
         }
       }
-      .HOME.active {
+      .home.active {
         background-color: ${ColorSet.blue};
       }
-      .ABOUT.active {
+      .about.active {
         background-color: ${ColorSet.red};
       }
-      .POLOG.active {
+      .polog.active {
         background-color: ${ColorSet.green};
       }
-      .VOTE.active {
+      .vote.active {
         background-color: ${ColorSet.orange};
       }
-      .SEARCH.active {
+      .search.active {
         background-color: ${ColorSet.indigo};
       }
-      .STATUS.active {
+      .status.active {
         background-color: ${ColorSet.yellow};
         span,
         svg {
           color: ${ColorSet.darkGray};
         }
       }
-      .HELP.active {
+      .help.active {
         background-color: ${ColorSet.purple};
       }
     }

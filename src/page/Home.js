@@ -7,7 +7,7 @@ import { SideStyle } from "../style/Side";
 const Home = () => {
   return (
     <Layout>
-      <SideStyle style={{ backgroundColor: "#2196f3" }}>
+      <SideStyle className="home">
         <HomeSide />
       </SideStyle>
       <Content>HOME</Content>

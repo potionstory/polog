@@ -7,7 +7,7 @@ import { SideStyle } from "../style/Side";
 const Polog = () => {
   return (
     <Layout>
-      <SideStyle style={{ backgroundColor: "#8bc34a" }}>
+      <SideStyle className="polog">
         <PologSide />
       </SideStyle>
       <Content>Polog</Content>

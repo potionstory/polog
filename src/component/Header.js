@@ -30,37 +30,37 @@ class Header extends Component {
     active: 0,
     menu: [
       {
-        name: "HOME",
+        name: "home",
         route: "/home",
         icon: <OpacityIcon />
       },
       {
-        name: "ABOUT",
+        name: "about",
         route: "/about",
         icon: <FaceIcon />
       },
       {
-        name: "POLOG",
+        name: "polog",
         route: "/polog",
         icon: <DescriptIcon />
       },
       {
-        name: "VOTE",
+        name: "vote",
         route: "/vote",
         icon: <VoteIcon />
       },
       {
-        name: "SEARCH",
+        name: "search",
         route: "/search",
         icon: <SearchIcon />
       },
       {
-        name: "STATUS",
+        name: "status",
         route: "/status",
         icon: <GradeIcon />
       },
       {
-        name: "HELP",
+        name: "help",
         route: "/help",
         icon: <HelpIcon />
       }
@@ -82,8 +82,8 @@ class Header extends Component {
     const { gnbIndex } = this.props;
     return (
       <HeaderStyle>
-        <div className="UserBox">
-          <div className="Circle">
+        <div className="userBox">
+          <div className="circle">
             <div className="logo" onMouseOver={this.handleOver}>
               <IconButton>
                 <OpacityIcon />
@@ -97,25 +97,25 @@ class Header extends Component {
               <NotiIcon />
             </IconButton>
           </div>
-          <div className="SignMenu">
-            {/* <div className="Out">
+          <div className="signMenu">
+            {/* <div className="out">
               <h2>POLOG</h2>
-              <span className="Buttons">
+              <span className="buttons">
                 <Button size="small" variant="contained">
                   <FaceIcon />
-                  &nbsp; SIGN IN
+                  &nbsp; sign in
                 </Button>
                 
                   <OpacityIcon />
-                  &nbsp; SIGN UP
+                  &nbsp; sign up
                 </Button>
               </span>
             </div> */}
-            <div className="In">
-              <div className="Detail">
+            <div className="in">
+              <div className="detail">
                 <h2>potionstory</h2>
-                <ul className="InfoList">
-                  <li className="Favorite">
+                <ul className="infolist">
+                  <li className="favorite">
                     <Chip
                       avatar={
                         <Avatar>
@@ -125,7 +125,7 @@ class Header extends Component {
                       label={99}
                     />
                   </li>
-                  <li className="BookMark">
+                  <li className="bookmark">
                     <Chip
                       avatar={
                         <Avatar>
@@ -135,7 +135,7 @@ class Header extends Component {
                       label={99}
                     />
                   </li>
-                  <li className="Descript">
+                  <li className="descript">
                     <Chip
                       avatar={
                         <Avatar>
@@ -145,7 +145,7 @@ class Header extends Component {
                       label={99}
                     />
                   </li>
-                  <li className="Commnet">
+                  <li className="commnet">
                     <Chip
                       avatar={
                         <Avatar>
@@ -157,20 +157,20 @@ class Header extends Component {
                   </li>
                 </ul>
               </div>
-              <span className="Buttons">
+              <span className="buttons">
                 <Button size="small" variant="contained">
                   <FaceIcon />
-                  &nbsp; SIGN OUT
+                  &nbsp; sign out
                 </Button>
                 <Button size="small" variant="contained">
                   <OpacityIcon />
-                  &nbsp; LEAVE
+                  &nbsp; leave
                 </Button>
               </span>
             </div>
           </div>
         </div>
-        <div className="MenuBox">
+        <div className="menubox">
           <List component="nav">
             {menu.map((m, i) => {
               return (
