@@ -172,48 +172,22 @@ class Header extends Component {
         </div>
         <div className="MenuBox">
           <List component="nav">
-            <ListItem button>
-              <ListItemIcon>
-                <OpacityIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="HOME" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <FaceIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="ABOUT" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <DescriptionIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="POLOG" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <DescriptionIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="Q&A" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <SearchIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="SEARCH" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <GradeIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="STATUS" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <HelpIcon />
-              </ListItemIcon>
-              <ListItemText inset primary="HELP" />
-            </ListItem>
+            {menu.map((m, i) => {
+              return (
+                <Link
+                  to={m.route}
+                  key={i}
+                  index={i}
+                  className={gnbIndex == i ? m.name + " active" : m.name}
+                  onClick={e => this.handleMenu(e, i)}
+                >
+                  <ListItem>
+                    <ListItemIcon>{m.icon}</ListItemIcon>
+                    <ListItemText inset primary={m.name} />
+                  </ListItem>
+                </Link>
+              );
+            })}
           </List>
         </div>
       </HeaderStyle>
