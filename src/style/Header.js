@@ -6,7 +6,7 @@ export const HeaderStyle = styled.div`
   position: relative;
   width: 200px;
   height: 100%;
-  background-color: ${ColorSet.darkGray};
+  background-color: ${ColorSet.gray};
   .userBox {
     padding: 10px;
     .circle {
@@ -98,8 +98,7 @@ export const HeaderStyle = styled.div`
           margin-top: 10px;
           font-family: "Spoqa Han Sans";
           font-size: 14px;
-          background-color: ${ColorSet.gray};
-          box-shadow: none;
+          background-color: ${ColorSet.lightGray};
           color: ${ColorSet.white};
           opacity: 0.6;
           &:hover {
@@ -116,6 +115,7 @@ export const HeaderStyle = styled.div`
       .out {
         h2 {
           padding-bottom: 10px;
+          color: ${ColorSet.white};
         }
       }
       .in {
@@ -224,12 +224,9 @@ export const HeaderStyle = styled.div`
       }
       .active {
         opacity: 1;
-        span,
-        svg {
-          color: ${ColorSet.white};
-        }
+        background-color: ${ColorSet.brightGray};
       }
-      .home.active {
+      ${"" /* .home.active {
         background-color: ${ColorSet.blue};
       }
       .about.active {
@@ -253,7 +250,7 @@ export const HeaderStyle = styled.div`
       }
       .help.active {
         background-color: ${ColorSet.purple};
-      }
+      } */};
     }
   }
 `;
