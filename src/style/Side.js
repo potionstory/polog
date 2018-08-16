@@ -45,7 +45,7 @@ export const SideStyle = styled.div`
             line-height: 48px;
           }
         }
-        .MuiExpansionPanelSummary-expandIcon-138 {
+        div + div {
           right: 0;
           color: #fff;
         }
