@@ -164,23 +164,31 @@ export const HeaderStyle = styled.div`
               }
             }
             .favorite {
-              .MuiChip-avatar-27 {
-                background-color: ${ColorSet.red};
+              div {
+                div {
+                  background-color: ${ColorSet.red};
+                }
               }
             }
             .bookmark {
-              .MuiChip-avatar-27 {
-                background-color: ${ColorSet.yellow};
+              div {
+                div {
+                  background-color: ${ColorSet.yellow};
+                }
               }
             }
             .descript {
-              .MuiChip-avatar-27 {
-                background-color: ${ColorSet.blue};
+              div {
+                div {
+                  background-color: ${ColorSet.blue};
+                }
               }
             }
             .commnet {
-              .MuiChip-avatar-27 {
-                background-color: ${ColorSet.green};
+              div {
+                div {
+                  background-color: ${ColorSet.green};
+                }
               }
             }
           }
