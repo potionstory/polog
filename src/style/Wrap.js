@@ -5,5 +5,4 @@ export const WrapStyle = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  font-family: "Spoqa Han Sans", "Helvetica", "Arial", sans-serif;
 `;

@@ -96,7 +96,6 @@ export const HeaderStyle = styled.div`
           display: block;
           width: 100%;
           margin-top: 10px;
-          font-family: "Spoqa Han Sans";
           font-size: 14px;
           background-color: ${ColorSet.lightGray};
           color: ${ColorSet.white};
@@ -156,7 +155,6 @@ export const HeaderStyle = styled.div`
               .MuiChip-root-24 {
                 width: 100%;
                 justify-content: left;
-                font-family: "Spoqa Han Sans";
                 font-weight: 600;
               }
               svg {
@@ -221,7 +219,6 @@ export const HeaderStyle = styled.div`
           opacity: 1;
         }
         span {
-          font-family: "Spoqa Han Sans";
           font-size: 14px;
           color: ${ColorSet.white};
           text-transform: uppercase;
