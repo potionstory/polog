@@ -82,7 +82,7 @@ export const HeaderStyle = styled.div`
       h2 {
         overflow: hidden;
         height: 48px;
-        font-size: 20px;
+        font-size: 1.4rem;
         font-weight: bold;
         font-style: italic;
         color: ${ColorSet.white};
@@ -96,8 +96,7 @@ export const HeaderStyle = styled.div`
           display: block;
           width: 100%;
           margin-top: 10px;
-          font-size: 14px;
-          background-color: ${ColorSet.lightGray};
+          background-color: ${ColorSet.blue};
           color: ${ColorSet.white};
           opacity: 0.6;
           &:hover {
@@ -130,7 +129,7 @@ export const HeaderStyle = styled.div`
           h2 {
             overflow: hidden;
             height: 48px;
-            font-size: 20px;
+            font-size: 1.4rem;
             font-weight: bold;
             font-style: italic;
             color: ${ColorSet.white};
@@ -219,7 +218,9 @@ export const HeaderStyle = styled.div`
           opacity: 1;
         }
         span {
-          font-size: 14px;
+          font-size: 0.92rem;
+          font-weight: 600;
+          font-style: italic;
           color: ${ColorSet.white};
           text-transform: uppercase;
         }
@@ -229,7 +230,7 @@ export const HeaderStyle = styled.div`
       }
       .active {
         opacity: 1;
-        background-color: ${ColorSet.brightGray};
+        background-color: ${ColorSet.lightGray};
       }
       ${"" /* .home.active {
         background-color: ${ColorSet.blue};

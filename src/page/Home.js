@@ -10,7 +10,15 @@ const Home = () => {
       <SideStyle className="home">
         <HomeSide />
       </SideStyle>
-      <Content>HOME</Content>
+      <Content>
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        <br />
+        가나다라마바사아자차카타파하
+        <br />
+        0123456789
+        <br />
+        ~!@#$%^&*()-+\
+      </Content>
     </Layout>
   );
 };
