@@ -151,6 +151,7 @@ export const SideStyle = styled.div`
               }
               svg {
                 margin-right: 0;
+                font-size: 20px;
                 color: ${ColorSet.white};
               }
               div {
@@ -158,7 +159,7 @@ export const SideStyle = styled.div`
                 span {
                   display: block;
                   overflow: hidden;
-                  font-size: 0.98rem;
+                  font-size: 0.8125rem;
                   color: ${ColorSet.white};
                   text-overflow: ellipsis;
                   white-space: nowrap;

@@ -13,8 +13,7 @@ import OpacityIcon from "@material-ui/icons/Opacity";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import InfoIcon from "@material-ui/icons/Info";
 import NextIcon from "@material-ui/icons/NavigateNext";
-
-import InboxIcon from "@material-ui/icons/Inbox";
+import DescriptIcon from "@material-ui/icons/Description";
 
 class HomeSide extends Component {
   state = {
@@ -82,31 +81,31 @@ class HomeSide extends Component {
                 <List component="nav">
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="공지사항1" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="공지사항2" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="공지사항3" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="공지사항4" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="공지사항5" />
                   </ListItem>
@@ -134,31 +133,31 @@ class HomeSide extends Component {
                 <List component="nav">
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="이벤트1" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="이벤트2" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="이벤트3" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="이벤트4" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="이벤트5" />
                   </ListItem>
@@ -186,31 +185,31 @@ class HomeSide extends Component {
                 <List component="nav">
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="업데이트1" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="업데이트2" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="업데이트3" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="업데이트4" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="업데이트5" />
                   </ListItem>
@@ -238,31 +237,31 @@ class HomeSide extends Component {
                 <List component="nav">
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="ETC1" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="ETC2" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="ETC3" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="ETC4" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <DescriptIcon />
                     </ListItemIcon>
                     <ListItemText primary="ETC5" />
                   </ListItem>
