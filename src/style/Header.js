@@ -6,7 +6,7 @@ export const HeaderStyle = styled.div`
   position: relative;
   width: 200px;
   height: 100%;
-  background-color: ${ColorSet.gray};
+  background-color: ${ColorSet.darkGray};
   .userBox {
     padding: 10px;
     .circle {
@@ -98,9 +98,8 @@ export const HeaderStyle = styled.div`
           margin-top: 10px;
           background-color: ${ColorSet.blue};
           color: ${ColorSet.white};
-          opacity: 0.6;
           &:hover {
-            opacity: 1;
+            background-color: ${ColorSet.lightBlue};
           }
           span {
             line-height: 24px;
@@ -142,7 +141,7 @@ export const HeaderStyle = styled.div`
             display: none;
             overflow: hidden;
             position: relative;
-            background-color: ${ColorSet.white};
+            background-color: ${ColorSet.gray};
             padding: 6px 5px;
             li {
               float: left;
@@ -153,6 +152,7 @@ export const HeaderStyle = styled.div`
               line-height: 38px;
               .MuiChip-root-24 {
                 width: 100%;
+                background-color: ${ColorSet.white};
                 justify-content: left;
                 font-weight: 600;
               }
@@ -190,10 +190,7 @@ export const HeaderStyle = styled.div`
             }
           }
           &:hover {
-            background-color: ${ColorSet.white};
-            h2 {
-              color: ${ColorSet.darkGray};
-            }
+            background-color: ${ColorSet.gray};
             .infolist {
               display: block;
             }

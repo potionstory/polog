@@ -2,14 +2,15 @@ export const ColorSet = {
   black: "#070a0e",
   white: "#fff",
   fontWhite: "#ddd",
-  darkGray: "#323336",
-  gray: "#38393c",
-  lightGray: "#67696b",
-  red: "#ed655a",
+  darkGray: "#282828",
+  gray: "#303030",
+  lightGray: "#404040",
+  red: "#ed4b48",
   orange: "#FB8C00",
-  yellow: "#e0c04c",
-  green: "#7CB342",
-  blue: "#2b61cc",
+  yellow: "#ffb400",
+  green: "#26b47f",
+  blue: "#097bed",
   indigo: "#3949AB",
-  purple: "#8E24AA"
+  purple: "#8E24AA",
+  lightBlue: "#288ff7"
 };

@@ -55,7 +55,7 @@ export const SideStyle = styled.div`
         margin-top: 10px;
         padding: 10px;
         border-radius: 4px;
-        background-color: ${ColorSet.white};
+        background-color: ${ColorSet.darkGray};
         ul,
         li {
           width: 100%;
@@ -106,6 +106,7 @@ export const SideStyle = styled.div`
       > div {
         box-shadow: none;
         border-radius: 4px 4px 0 0;
+        background-color: ${ColorSet.darkGray};
         &:first-child {
           margin: 0;
         }
@@ -115,12 +116,12 @@ export const SideStyle = styled.div`
           div:first-child {
             margin: 0;
             svg {
-              color: ${ColorSet.lightGray};
+              color: ${ColorSet.white};
             }
           }
           h3 {
             padding: 0 10px;
-            color: ${ColorSet.lightGray};
+            color: ${ColorSet.white};
             font-size: 1.04rem;
             font-weight: 600;
             font-style: italic;
@@ -131,7 +132,7 @@ export const SideStyle = styled.div`
             width: 38px;
             height: 38px;
             svg {
-              color: ${ColorSet.lightGray};
+              color: ${ColorSet.white};
             }
           }
         }
@@ -140,16 +141,17 @@ export const SideStyle = styled.div`
           nav {
             width: 100%;
             padding: 0;
-            border-top: 1px solid #e0e0e0;
-            background-color: #fafafa;
+            border-top: 1px solid ${ColorSet.black};
+            background-color: ${ColorSet.gray};
             > div {
               padding: 7px 24px;
-              background-color: ;
+              opacity: 0.6;
               &:hover {
                 opacity: 1;
               }
               svg {
                 margin-right: 0;
+                color: ${ColorSet.white};
               }
               div {
                 padding: 0 0 0 10px;
@@ -157,7 +159,7 @@ export const SideStyle = styled.div`
                   display: block;
                   overflow: hidden;
                   font-size: 0.98rem;
-                  color: #67696b;
+                  color: ${ColorSet.white};
                   text-overflow: ellipsis;
                   white-space: nowrap;
                   letter-spacing: -0.4px;
@@ -179,6 +181,9 @@ export const SideStyle = styled.div`
         background-color: ${ColorSet.blue};
         color: ${ColorSet.white};
         line-height: 24px;
+        &:hover {
+          background-color: ${ColorSet.lightBlue};
+        }
       }
     }
   }
