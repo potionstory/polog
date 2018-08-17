@@ -227,7 +227,7 @@ export const HeaderStyle = styled.div`
       }
       .active {
         opacity: 1;
-        background-color: ${ColorSet.lightGray};
+        background-color: ${ColorSet.gray};
       }
       ${"" /* .home.active {
         background-color: ${ColorSet.blue};

@@ -111,11 +111,11 @@ class HomeSide extends Component {
                   </ListItem>
                 </List>
               </ExpansionPanelDetails>
+              <Button className="more" variant="contained" size="small">
+                전체보기
+                <NextIcon />
+              </Button>
             </ExpansionPanel>
-            <Button className="more" variant="contained" size="small">
-              전체보기
-              <NextIcon />
-            </Button>
           </div>
           <div className="groupbox">
             <ExpansionPanel
@@ -163,11 +163,11 @@ class HomeSide extends Component {
                   </ListItem>
                 </List>
               </ExpansionPanelDetails>
+              <Button className="more" variant="contained" size="small">
+                전체보기
+                <NextIcon />
+              </Button>
             </ExpansionPanel>
-            <Button className="more" variant="contained" size="small">
-              전체보기
-              <NextIcon />
-            </Button>
           </div>
           <div className="groupbox">
             <ExpansionPanel
@@ -215,11 +215,11 @@ class HomeSide extends Component {
                   </ListItem>
                 </List>
               </ExpansionPanelDetails>
+              <Button className="more" variant="contained" size="small">
+                전체보기
+                <NextIcon />
+              </Button>
             </ExpansionPanel>
-            <Button className="more" variant="contained" size="small">
-              전체보기
-              <NextIcon />
-            </Button>
           </div>
           <div className="groupbox">
             <ExpansionPanel
@@ -267,11 +267,11 @@ class HomeSide extends Component {
                   </ListItem>
                 </List>
               </ExpansionPanelDetails>
+              <Button className="more" variant="contained" size="small">
+                전체보기
+                <NextIcon />
+              </Button>
             </ExpansionPanel>
-            <Button className="more" variant="contained" size="small">
-              전체보기
-              <NextIcon />
-            </Button>
           </div>
         </div>
       </div>

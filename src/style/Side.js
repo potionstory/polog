@@ -7,7 +7,7 @@ export const SideStyle = styled.div`
   width: 300px;
   height: 100%;
   box-sizing: border-box;
-  background-color: ${ColorSet.lightGray};
+  background-color: ${ColorSet.gray};
   color: ${ColorSet.white};
   .infocard {
     margin-top: 10px;
@@ -32,11 +32,11 @@ export const SideStyle = styled.div`
           margin: 0;
           div {
             width: 48px;
-            background-color: ${ColorSet.white};
+            background-color: ${ColorSet.blue};
             svg {
               width: 36px;
               height: 36px;
-              color: ${ColorSet.blue};
+              color: ${ColorSet.white};
             }
           }
           h2 {
@@ -55,7 +55,7 @@ export const SideStyle = styled.div`
         margin-top: 10px;
         padding: 10px;
         border-radius: 4px;
-        background-color: ${ColorSet.darkGray};
+        background-color: ${ColorSet.lightGray};
         ul,
         li {
           width: 100%;
@@ -68,14 +68,14 @@ export const SideStyle = styled.div`
             }
             .key {
               width: 100%;
-              background-color: ${ColorSet.lightGray};
-              color: ${ColorSet.white};
+              background-color: ${ColorSet.white};
+              color: ${ColorSet.lightGray};
               line-height: 32px;
               justify-content: left;
               svg {
                 width: 32px;
                 height: 32px;
-                color: ${ColorSet.white};
+                color: ${ColorSet.lightGray};
               }
             }
             .value {
@@ -87,7 +87,7 @@ export const SideStyle = styled.div`
               padding: 0 12px;
               border-radius: 16px;
               font-size: 0.8125rem;
-              color: ${ColorSet.white};
+              color: ${ColorSet.lightGray};
               text-align: center;
               line-height: 32px;
             }
@@ -105,8 +105,11 @@ export const SideStyle = styled.div`
         0px 2px 1px -1px rgba(0, 0, 0, 0.12);
       > div {
         box-shadow: none;
-        border-radius: 4px 4px 0 0;
-        background-color: ${ColorSet.darkGray};
+        border-radius: 4px;
+        background-color: ${ColorSet.lightGray};
+        &:hover {
+          background-color: ${ColorSet.brightGray};
+        }
         &:first-child {
           margin: 0;
         }
@@ -142,7 +145,7 @@ export const SideStyle = styled.div`
             width: 100%;
             padding: 0;
             border-top: 1px solid ${ColorSet.black};
-            background-color: ${ColorSet.gray};
+            background-color: ${ColorSet.darkGray};
             > div {
               padding: 7px 24px;
               opacity: 0.6;
