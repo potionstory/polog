@@ -6,7 +6,7 @@ export const ColorSet = {
   gray: "#303030",
   lightGray: "#404040",
   red: "#ed4b48",
-  orange: "#FB8C00",
+  orange: "#f26b3a",
   yellow: "#ffb400",
   green: "#26b47f",
   blue: "#097bed",
