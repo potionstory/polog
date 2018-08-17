@@ -68,14 +68,14 @@ export const SideStyle = styled.div`
             }
             .key {
               width: 100%;
-              background-color: ${ColorSet.white};
-              color: ${ColorSet.lightGray};
+              background-color: ${ColorSet.darkGray};
+              color: ${ColorSet.white};
               line-height: 32px;
               justify-content: left;
               svg {
                 width: 32px;
                 height: 32px;
-                color: ${ColorSet.lightGray};
+                color: ${ColorSet.white};
               }
             }
             .value {
@@ -87,7 +87,7 @@ export const SideStyle = styled.div`
               padding: 0 12px;
               border-radius: 16px;
               font-size: 0.8125rem;
-              color: ${ColorSet.lightGray};
+              color: ${ColorSet.white};
               text-align: center;
               line-height: 32px;
             }
