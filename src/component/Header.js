@@ -82,7 +82,7 @@ class Header extends Component {
     const { gnbIndex } = this.props;
     return (
       <HeaderStyle>
-        <div className="userBox">
+        <div className="userbox">
           <div className="circle">
             <div className="logo" onMouseOver={this.handleOver}>
               <IconButton>
@@ -97,7 +97,7 @@ class Header extends Component {
               <NotiIcon />
             </IconButton>
           </div>
-          <div className="signMenu">
+          <div className="signmenu">
             {/* <div className="out">
               <h2>POLOG</h2>
               <span className="buttons">

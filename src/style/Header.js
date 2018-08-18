@@ -7,7 +7,7 @@ export const HeaderStyle = styled.div`
   width: 200px;
   height: 100%;
   background-color: ${ColorSet.darkGray};
-  .userBox {
+  .userbox {
     padding: 10px;
     .circle {
       position: relative;
@@ -75,7 +75,7 @@ export const HeaderStyle = styled.div`
         }
       }
     }
-    .signMenu {
+    .signmenu {
       margin-top: 10px;
       position: relative;
       text-align: center;
@@ -96,6 +96,7 @@ export const HeaderStyle = styled.div`
           display: block;
           width: 100%;
           margin-top: 10px;
+          box-shadow: none;
           background-color: ${ColorSet.blue};
           color: ${ColorSet.white};
           &:hover {
