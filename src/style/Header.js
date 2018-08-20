@@ -182,7 +182,7 @@ export const HeaderStyle = styled.div`
                 }
               }
             }
-            .commnet {
+            .comment {
               div {
                 div {
                   background-color: ${ColorSet.green};

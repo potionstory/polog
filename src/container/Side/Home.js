@@ -6,18 +6,112 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
 import Button from "@material-ui/core/Button";
 import OpacityIcon from "@material-ui/icons/Opacity";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import InfoIcon from "@material-ui/icons/Info";
 import NextIcon from "@material-ui/icons/NavigateNext";
-import DescriptIcon from "@material-ui/icons/Description";
+import GroupList from "./GroupList";
 
 class HomeSide extends Component {
   state = {
-    expanded: null
+    expanded: null,
+    info: [
+      {
+        item: "Number",
+        value: 99
+      },
+      {
+        item: "Version",
+        value: "v1.0.0"
+      },
+      {
+        item: "Last Update",
+        value: "2018년 8월 20일"
+      }
+    ],
+    list: [
+      {
+        category: "공지사항",
+        item: [
+          {
+            title: "공지사항1"
+          },
+          {
+            title: "공지사항2"
+          },
+          {
+            title: "공지사항3"
+          },
+          {
+            title: "공지사항4"
+          },
+          {
+            title: "공지사항5"
+          }
+        ]
+      },
+      {
+        category: "이벤트",
+        item: [
+          {
+            title: "이벤트1"
+          },
+          {
+            title: "이벤트2"
+          },
+          {
+            title: "이벤트3"
+          },
+          {
+            title: "이벤트4"
+          },
+          {
+            title: "이벤트5"
+          }
+        ]
+      },
+      {
+        category: "업데이트",
+        item: [
+          {
+            title: "업데이트1"
+          },
+          {
+            title: "업데이트2"
+          },
+          {
+            title: "업데이트3"
+          },
+          {
+            title: "업데이트4"
+          },
+          {
+            title: "업데이트5"
+          }
+        ]
+      },
+      {
+        category: "ETC",
+        item: [
+          {
+            title: "ETC1"
+          },
+          {
+            title: "ETC2"
+          },
+          {
+            title: "ETC3"
+          },
+          {
+            title: "ETC4"
+          },
+          {
+            title: "ETC5"
+          }
+        ]
+      }
+    ]
   };
 
   handleChange = panel => (e, expanded) => {
@@ -27,7 +121,7 @@ class HomeSide extends Component {
   };
 
   render() {
-    const { expanded } = this.state;
+    const { expanded, info, list } = this.state;
     return (
       <div>
         <div className="infocard">
@@ -43,236 +137,51 @@ class HomeSide extends Component {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails className="detail">
               <List>
-                <ListItem>
-                  <Chip className="key" avatar={<InfoIcon />} label="Number" />
-                  <span className="value">999</span>
-                </ListItem>
-                <ListItem>
-                  <Chip className="key" avatar={<InfoIcon />} label="Version" />
-                  <span className="value">v0.0.0</span>
-                </ListItem>
-                <ListItem>
-                  <Chip
-                    className="key"
-                    avatar={<InfoIcon />}
-                    label="Last Update"
-                  />
-                  <span className="value">2018년 8월 20일</span>
-                </ListItem>
+                {info.map((n, i) => {
+                  return (
+                    <ListItem key={i}>
+                      <Chip
+                        className="key"
+                        avatar={<InfoIcon />}
+                        label={n.item}
+                      />
+                      <span className="value">{n.value}</span>
+                    </ListItem>
+                  );
+                })}
               </List>
             </ExpansionPanelDetails>
           </ExpansionPanel>
         </div>
 
         <div className="listgroup">
-          <div className="groupbox">
-            <ExpansionPanel
-              expanded={expanded === "panel1"}
-              onChange={this.handleChange("panel1")}
-            >
-              <ExpansionPanelSummary
-                className="title"
-                expandIcon={<ExpandMoreIcon />}
-              >
-                <OpacityIcon />
-                <h3>공지사항</h3>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails className="detail">
-                <List component="nav">
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="공지사항1" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="공지사항2" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="공지사항3" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="공지사항4" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="공지사항5" />
-                  </ListItem>
-                </List>
-              </ExpansionPanelDetails>
-              <Button className="more" variant="contained" size="small">
-                전체보기
-                <NextIcon />
-              </Button>
-            </ExpansionPanel>
-          </div>
-          <div className="groupbox">
-            <ExpansionPanel
-              expanded={expanded === "panel2"}
-              onChange={this.handleChange("panel2")}
-            >
-              <ExpansionPanelSummary
-                className="title"
-                expandIcon={<ExpandMoreIcon />}
-              >
-                <OpacityIcon />
-                <h3>이벤트</h3>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails className="detail">
-                <List component="nav">
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="이벤트1" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="이벤트2" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="이벤트3" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="이벤트4" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="이벤트5" />
-                  </ListItem>
-                </List>
-              </ExpansionPanelDetails>
-              <Button className="more" variant="contained" size="small">
-                전체보기
-                <NextIcon />
-              </Button>
-            </ExpansionPanel>
-          </div>
-          <div className="groupbox">
-            <ExpansionPanel
-              expanded={expanded === "panel3"}
-              onChange={this.handleChange("panel3")}
-            >
-              <ExpansionPanelSummary
-                className="title"
-                expandIcon={<ExpandMoreIcon />}
-              >
-                <OpacityIcon />
-                <h3>업데이트</h3>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails className="detail">
-                <List component="nav">
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="업데이트1" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="업데이트2" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="업데이트3" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="업데이트4" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="업데이트5" />
-                  </ListItem>
-                </List>
-              </ExpansionPanelDetails>
-              <Button className="more" variant="contained" size="small">
-                전체보기
-                <NextIcon />
-              </Button>
-            </ExpansionPanel>
-          </div>
-          <div className="groupbox">
-            <ExpansionPanel
-              expanded={expanded === "panel4"}
-              onChange={this.handleChange("panel4")}
-            >
-              <ExpansionPanelSummary
-                className="title"
-                expandIcon={<ExpandMoreIcon />}
-              >
-                <OpacityIcon />
-                <h3>ETC</h3>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails className="detail">
-                <List component="nav">
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="ETC1" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="ETC2" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="ETC3" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="ETC4" />
-                  </ListItem>
-                  <ListItem button>
-                    <ListItemIcon>
-                      <DescriptIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="ETC5" />
-                  </ListItem>
-                </List>
-              </ExpansionPanelDetails>
-              <Button className="more" variant="contained" size="small">
-                전체보기
-                <NextIcon />
-              </Button>
-            </ExpansionPanel>
-          </div>
+          {list.map((n, i) => {
+            return (
+              <div key={i} className="groupbox">
+                <ExpansionPanel
+                  expanded={expanded === i}
+                  onChange={this.handleChange(i)}
+                >
+                  <ExpansionPanelSummary
+                    className="title"
+                    expandIcon={<ExpandMoreIcon />}
+                  >
+                    <OpacityIcon />
+                    <h3>{n.category}</h3>
+                  </ExpansionPanelSummary>
+                  <ExpansionPanelDetails className="detail">
+                    <List component="nav">
+                      <GroupList list={n.item} />
+                    </List>
+                  </ExpansionPanelDetails>
+                  <Button className="more" variant="contained" size="small">
+                    전체보기
+                    <NextIcon />
+                  </Button>
+                </ExpansionPanel>
+              </div>
+            );
+          })}
         </div>
       </div>
     );

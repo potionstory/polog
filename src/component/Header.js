@@ -27,6 +27,28 @@ import * as authActions from "../store/modules/Auth";
 
 class Header extends Component {
   state = {
+    info: [
+      {
+        name: "favorite",
+        number: 99,
+        icon: <FavoriteIcon />
+      },
+      {
+        name: "bookmark",
+        number: 99,
+        icon: <BookmarkIcon />
+      },
+      {
+        name: "descript",
+        number: 99,
+        icon: <DescriptIcon />
+      },
+      {
+        name: "comment",
+        number: 99,
+        icon: <SmsIcon />
+      }
+    ],
     active: 0,
     menu: [
       {
@@ -78,7 +100,7 @@ class Header extends Component {
   };
 
   render() {
-    const { menu } = this.state;
+    const { info, menu } = this.state;
     const { gnbIndex } = this.props;
     return (
       <HeaderStyle>
@@ -115,46 +137,16 @@ class Header extends Component {
               <div className="detail">
                 <h2>potionstory</h2>
                 <ul className="infolist">
-                  <li className="favorite">
-                    <Chip
-                      avatar={
-                        <Avatar>
-                          <FavoriteIcon />
-                        </Avatar>
-                      }
-                      label={99}
-                    />
-                  </li>
-                  <li className="bookmark">
-                    <Chip
-                      avatar={
-                        <Avatar>
-                          <BookmarkIcon />
-                        </Avatar>
-                      }
-                      label={99}
-                    />
-                  </li>
-                  <li className="descript">
-                    <Chip
-                      avatar={
-                        <Avatar>
-                          <DescriptIcon />
-                        </Avatar>
-                      }
-                      label={99}
-                    />
-                  </li>
-                  <li className="commnet">
-                    <Chip
-                      avatar={
-                        <Avatar>
-                          <SmsIcon />
-                        </Avatar>
-                      }
-                      label={99}
-                    />
-                  </li>
+                  {info.map((n, i) => {
+                    return (
+                      <li key={i} className={n.name}>
+                        <Chip
+                          avatar={<Avatar>{n.icon}</Avatar>}
+                          label={n.number}
+                        />
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               <span className="buttons">
@@ -172,18 +164,18 @@ class Header extends Component {
         </div>
         <div className="menubox">
           <List component="nav">
-            {menu.map((m, i) => {
+            {menu.map((n, i) => {
               return (
                 <Link
-                  to={m.route}
+                  to={n.route}
                   key={i}
                   index={i}
-                  className={gnbIndex == i ? m.name + " active" : m.name}
+                  className={gnbIndex === i ? n.name + " active" : n.name}
                   onClick={e => this.handleMenu(e, i)}
                 >
                   <ListItem>
-                    <ListItemIcon>{m.icon}</ListItemIcon>
-                    <ListItemText inset primary={m.name} />
+                    <ListItemIcon>{n.icon}</ListItemIcon>
+                    <ListItemText inset primary={n.name} />
                   </ListItem>
                 </Link>
               );
