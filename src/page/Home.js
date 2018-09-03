@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../component/Layout";
 import HomeSide from "../container/Side/Home";
+import HomeContent from "../container/Content/Home";
 import Content from "../component/Content";
 import { SideStyle } from "../style/Side";
 
@@ -11,13 +12,7 @@ const Home = () => {
         <HomeSide />
       </SideStyle>
       <Content>
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ
-        <br />
-        가나다라마바사아자차카타파하
-        <br />
-        0123456789
-        <br />
-        ~!@#$%^&*()-+\
+        <HomeContent />
       </Content>
     </Layout>
   );

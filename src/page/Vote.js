@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../component/Layout";
 import VoteSide from "../container/Side/Vote";
+import VoteContent from "../container/Content/Vote";
 import Content from "../component/Content";
 import { SideStyle } from "../style/Side";
 
@@ -10,7 +11,9 @@ const Vote = () => {
       <SideStyle className="vote">
         <VoteSide />
       </SideStyle>
-      <Content>Vote</Content>
+      <Content>
+        <VoteContent />
+      </Content>
     </Layout>
   );
 };
