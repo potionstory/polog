@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from "../page/Home";
 import About from "../page/About";
 import Polog from "../page/Polog";
+import Bookmark from "../page/Bookmark";
 import Vote from "../page/Vote";
 import Search from "../page/Search";
 import Status from "../page/Status";
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path="/home" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/polog" component={Polog} />
+            <Route path="/bookmark" component={Bookmark} />
             <Route path="/vote" component={Vote} />
             <Route path="/search" component={Search} />
             <Route path="/status" component={Status} />

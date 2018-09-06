@@ -14,8 +14,8 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import NotiIcon from "@material-ui/icons/Notifications";
 import FaceIcon from "@material-ui/icons/Face";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import BookmarkIcon from "@material-ui/icons/Bookmark";
 import DescriptIcon from "@material-ui/icons/Description";
+import BookmarkIcon from "@material-ui/icons/Bookmark";
 import SmsIcon from "@material-ui/icons/Sms";
 import Button from "@material-ui/core/Button";
 import VoteIcon from "@material-ui/icons/Beenhere";
@@ -65,6 +65,11 @@ class Header extends Component {
         name: "polog",
         route: "/polog",
         icon: <DescriptIcon />
+      },
+      {
+        name: "bookmark",
+        route: "/bookmark",
+        icon: <BookmarkIcon />
       },
       {
         name: "vote",

@@ -6,6 +6,8 @@ export const ContentStyle = styled.div`
   flex: 1;
   overflow-y: auto;
   height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
   background-color: ${ColorSet.darkGray};
   color: #fff;
 `;
