@@ -12,16 +12,19 @@ export const ContentStyle = styled.div`
   color: #fff;
   .main {
     .Card {
+      display: inline-block;
+      margin: 1rem;
       max-width: 300px;
       background-color: ${ColorSet.darkGray};
+      opacity: 0.6;
+      transition: opacity 300ms;
+      &:hover {
+        opacity: 1;
+      }
       .CardHeader {
         position: relative;
         padding: 1rem;
         background-color: #fff;
-        opacity: 0.6;
-        &:hover {
-          opacity: 1;
-        }
         a {
           display: -webkit-flex;
           display: flex;
@@ -56,10 +59,6 @@ export const ContentStyle = styled.div`
       .CardContent {
         background-color: ${ColorSet.lightGray};
         padding: 0;
-        opacity: 0.6;
-        &:hover {
-          opacity: 1;
-        }
         a {
           display: block;
           padding: 1rem;
@@ -86,10 +85,6 @@ export const ContentStyle = styled.div`
       .CardActions {
         padding: 1rem;
         background-color: ${ColorSet.blue};
-        opacity: 0.6;
-        &:hover {
-          opacity: 1;
-        }
         button {
           svg {
             color: ${ColorSet.white};
