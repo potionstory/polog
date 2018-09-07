@@ -10,8 +10,8 @@ export const SideStyle = styled.div`
   background-color: ${ColorSet.gray};
   color: ${ColorSet.white};
   .infocard {
-    margin-top: 10px;
-    padding: 0 10px;
+    margin-top: 1rem;
+    padding: 0 1rem;
     .card {
       overflow: hidden;
       position: relative;
@@ -34,8 +34,8 @@ export const SideStyle = styled.div`
             width: 48px;
             background-color: ${ColorSet.blue};
             svg {
-              width: 36px;
-              height: 36px;
+              width: 32px;
+              height: 32px;
               color: ${ColorSet.white};
             }
           }
@@ -52,8 +52,8 @@ export const SideStyle = styled.div`
         }
       }
       .detail {
-        margin-top: 10px;
-        padding: 10px;
+        margin-top: 1rem;
+        padding: 1rem;
         border-radius: 4px;
         background-color: ${ColorSet.lightGray};
         ul,
@@ -62,7 +62,7 @@ export const SideStyle = styled.div`
           padding: 0;
           li {
             position: relative;
-            margin-top: 10px;
+            margin-top: 1rem;
             &:first-child {
               margin-top: 0;
             }
@@ -97,9 +97,9 @@ export const SideStyle = styled.div`
     }
   }
   .listgroup {
-    padding: 0 10px;
+    padding: 0 1rem;
     .groupbox {
-      margin-top: 10px;
+      margin-top: 1rem;
       > div {
         box-shadow: none;
         border-radius: 4px;
@@ -112,7 +112,7 @@ export const SideStyle = styled.div`
         }
         .title {
           min-height: 38px;
-          padding: 0 10px;
+          padding: 0 1rem;
           div:first-child {
             margin: 0;
             svg {
@@ -142,6 +142,7 @@ export const SideStyle = styled.div`
             width: 100%;
             padding: 0;
             border-top: 1px solid ${ColorSet.black};
+            border-bottom: 1px solid ${ColorSet.black};
             background-color: ${ColorSet.darkGray};
             > div {
               padding: 7px 24px;

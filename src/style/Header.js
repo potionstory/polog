@@ -8,7 +8,7 @@ export const HeaderStyle = styled.div`
   height: 100%;
   background-color: ${ColorSet.darkGray};
   .userbox {
-    padding: 10px;
+    padding: 1rem;
     .circle {
       position: relative;
       text-align: center;
@@ -25,8 +25,8 @@ export const HeaderStyle = styled.div`
           cursor: pointer;
         }
         button {
-          width: 150px;
-          height: 150px;
+          width: 168px;
+          height: 168px;
           margin: 0;
           background-color: ${ColorSet.blue};
           transition: opacity 300ms;
@@ -41,7 +41,7 @@ export const HeaderStyle = styled.div`
       .noti {
         display: none;
         position: absolute;
-        top: 50%;
+        bottom: 10%;
         z-index: 10;
         width: 32px;
         height: 32px;
@@ -82,6 +82,7 @@ export const HeaderStyle = styled.div`
       h2 {
         overflow: hidden;
         height: 48px;
+        padding: 0 10px;
         font-size: 1.4rem;
         font-weight: bold;
         font-style: italic;
@@ -142,7 +143,7 @@ export const HeaderStyle = styled.div`
             display: none;
             overflow: hidden;
             position: relative;
-            background-color: ${ColorSet.gray};
+            background-color: ${ColorSet.white};
             padding: 6px 5px;
             li {
               float: left;
@@ -152,12 +153,27 @@ export const HeaderStyle = styled.div`
               padding: 0 5px;
               line-height: 38px;
               .MuiChip-root-24 {
-                width: 100%;
-                background-color: ${ColorSet.white};
+                width: calc(100% - 4px);
+                height: 28px;
+                padding: 2px;
+                background-color: ${ColorSet.gray};
+                color: ${ColorSet.white};
+                font-size: 0.8125rem;
                 justify-content: left;
-                font-weight: 600;
+                .MuiAvatar-root-31 {
+                  width: 26px;
+                  height: 26px;
+                }
+                .MuiChip-label-29 {
+                  display: block;
+                  width: 100%;
+                  padding: 0 4px;
+                  text-align: center;
+                }
               }
               svg {
+                width: 18px;
+                height: 18px;
                 color: ${ColorSet.white};
               }
             }
@@ -191,7 +207,10 @@ export const HeaderStyle = styled.div`
             }
           }
           &:hover {
-            background-color: ${ColorSet.gray};
+            background-color: ${ColorSet.white};
+            h2 {
+              color: ${ColorSet.gray};
+            }
             .infolist {
               display: block;
             }
@@ -205,9 +224,9 @@ export const HeaderStyle = styled.div`
     }
   }
   .menubox {
-    margin-top: 10px;
     color: ${ColorSet.white};
     nav {
+      padding: 0;
       > a {
         display: block;
         opacity: 0.6;
