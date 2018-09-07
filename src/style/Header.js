@@ -140,7 +140,7 @@ export const HeaderStyle = styled.div`
             cursor: pointer;
           }
           .infolist {
-            display: block;
+            display: none;
             overflow: hidden;
             position: relative;
             background-color: ${ColorSet.white};
