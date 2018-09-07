@@ -140,7 +140,7 @@ export const HeaderStyle = styled.div`
             cursor: pointer;
           }
           .infolist {
-            display: none;
+            display: block;
             overflow: hidden;
             position: relative;
             background-color: ${ColorSet.white};
@@ -152,7 +152,7 @@ export const HeaderStyle = styled.div`
               margin: 5px 0;
               padding: 0 5px;
               line-height: 38px;
-              .MuiChip-root-24 {
+              .info {
                 width: calc(100% - 4px);
                 height: 28px;
                 padding: 2px;
@@ -160,11 +160,11 @@ export const HeaderStyle = styled.div`
                 color: ${ColorSet.white};
                 font-size: 0.8125rem;
                 justify-content: left;
-                .MuiAvatar-root-31 {
+                div {
                   width: 26px;
                   height: 26px;
                 }
-                .MuiChip-label-29 {
+                span {
                   display: block;
                   width: 100%;
                   padding: 0 4px;

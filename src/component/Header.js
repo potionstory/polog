@@ -146,6 +146,7 @@ class Header extends Component {
                     return (
                       <li key={i} className={n.name}>
                         <Chip
+                          className="info"
                           avatar={<Avatar>{n.icon}</Avatar>}
                           label={n.number}
                         />
