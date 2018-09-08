@@ -23,7 +23,7 @@ export const ContentStyle = styled.div`
       }
       .CardHeader {
         position: relative;
-        padding: 1rem;
+        padding: 0.5rem;
         background-color: #fff;
         a {
           display: -webkit-flex;
@@ -52,8 +52,40 @@ export const ContentStyle = styled.div`
         }
         button {
           position: absolute;
-          top: 1rem;
-          right: 1rem;
+          top: 0.5rem;
+          right: 0.5rem;
+        }
+      }
+      .CardCatergory {
+        position: relative;
+        padding: 0.5rem;
+        background-color: ${ColorSet.white};
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 0.5rem;
+          width: calc(100% - 1rem);
+          height: 1px;
+          background-color: ${ColorSet.brightGray};
+          content: "";
+          opacity: 0.6;
+        }
+        a {
+          display: inline-block;
+          font-size: 0.8125rem;
+          color: ${ColorSet.brightGray};
+          text-decoration: none;
+          vertical-align: middle;
+          line-height: 24px;
+          opacity: 0.6;
+          &:hover {
+            opacity: 1;
+          }
+        }
+        svg {
+          vertical-align: middle;
+          color: ${ColorSet.brightGray};
+          opacity: 0.6;
         }
       }
       .CardContent {
@@ -64,10 +96,16 @@ export const ContentStyle = styled.div`
           padding: 1rem;
           text-decoration: none;
           h4 {
+            display: -webkit-box;
+            overflow: hidden;
+            height: 3rem;
             font-size: 1.25rem;
             font-weight: bold;
             color: ${ColorSet.white};
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
             line-height: 1.5rem;
+            -webkit-box-orient: vertical;
           }
           p {
             display: -webkit-box;
@@ -83,12 +121,36 @@ export const ContentStyle = styled.div`
         }
       }
       .CardActions {
-        padding: 1rem;
+        display: block;
+        padding: 0.5rem;
         background-color: ${ColorSet.blue};
-        button {
-          svg {
-            color: ${ColorSet.white};
+        ul {
+          float: left;
+          li {
+            display: inline-block;
+            margin-right: 1rem;
+            svg {
+              color: ${ColorSet.white};
+              vertical-align: middle;
+            }
+            span {
+              display: inline-block;
+              padding: 0 8px;
+              font-size: 0.8125rem;
+              line-height: 24px;
+            }
           }
+        }
+        p {
+          float: right;
+          font-size: 0.8125rem;
+          color: ${ColorSet.white};
+          line-height: 24px;
+        }
+        &:after {
+          display: block;
+          clear: both;
+          content: "";
         }
       }
     }

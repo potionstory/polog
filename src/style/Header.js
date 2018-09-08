@@ -97,6 +97,7 @@ export const HeaderStyle = styled.div`
           display: block;
           width: 100%;
           margin-top: 10px;
+          padding: 8px;
           box-shadow: none;
           background-color: ${ColorSet.blue};
           color: ${ColorSet.white};
@@ -149,7 +150,7 @@ export const HeaderStyle = styled.div`
               float: left;
               width: calc(50% - 10px);
               height: 32px;
-              margin: 5px 0;
+              margin: 6px 0;
               padding: 0 5px;
               line-height: 38px;
               .info {
