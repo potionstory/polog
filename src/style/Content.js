@@ -43,7 +43,7 @@ export const ContentStyle = styled.div`
             -webkit-flex: 1;
             flex: 1;
             padding: 0 1rem;
-            font-size: 18px;
+            font-size: 1rem;
             font-weight: bold;
             font-style: italic;
             color: ${ColorSet.gray};
@@ -66,14 +66,15 @@ export const ContentStyle = styled.div`
           left: 0.5rem;
           width: calc(100% - 1rem);
           height: 1px;
-          background-color: ${ColorSet.brightGray};
+          background-color: ${ColorSet.lightGray};
           content: "";
+          opacity: 0.2;
         }
         a {
           display: inline-block;
           padding: 0 0.5rem;
           border-radius: 4px;
-          background-color: ${ColorSet.gray};
+          background-color: ${ColorSet.lightGray};
           font-size: 0.8125rem;
           color: ${ColorSet.white};
           text-decoration: none;
@@ -86,7 +87,7 @@ export const ContentStyle = styled.div`
         }
         svg {
           vertical-align: middle;
-          color: ${ColorSet.brightGray};
+          color: ${ColorSet.lightGray};
         }
       }
       .CardContent {

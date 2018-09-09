@@ -9,19 +9,34 @@ import IconButton from "@material-ui/core/IconButton";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Typography from "@material-ui/core/Typography";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import Button from "@material-ui/core/Button";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import SmsIcon from "@material-ui/icons/Sms";
 
-class HomeContent extends Component {
-  state = { expanded: false };
+import Popover from "@material-ui/core/Popover";
 
-  handleExpandClick = () => {
-    this.setState(state => ({ expanded: !state.expanded }));
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import ImageIcon from "@material-ui/icons/Image";
+import WorkIcon from "@material-ui/icons/Work";
+import BeachAccessIcon from "@material-ui/icons/BeachAccess";
+
+class HomeContent extends Component {
+  state = {
+    anchorEl: null
+  };
+
+  handleClick = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
+
+  handleClose = () => {
+    this.setState({ anchorEl: null });
   };
 
   render() {
-    const { classes } = this.props;
+    const { anchorEl } = this.state;
+    const open = Boolean(anchorEl);
     return (
       <div className="main">
         <Card className="Card">
@@ -32,9 +47,42 @@ class HomeContent extends Component {
               </Avatar>
               <strong className="user">potionstory</strong>
             </Link>
-            <IconButton>
+            <IconButton
+              aria-owns={open ? "simple-popper" : null}
+              aria-haspopup="true"
+              variant="contained"
+              onClick={this.handleClick}
+            >
               <MoreVertIcon />
             </IconButton>
+            <Popover
+              id="UserInfo"
+              className="PopInfo"
+              open={open}
+              anchorEl={anchorEl}
+              onClose={this.handleClose}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right"
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left"
+              }}
+            >
+              <List>
+                <ListItem>
+                  <Avatar className="icon">
+                    <ImageIcon />
+                  </Avatar>
+                  <ListItemText
+                    primary="potionstory"
+                    secondary="JOIN: 2018.09.10"
+                  />
+                </ListItem>
+                <ListItem>좋아요/북마크/게시글/댓글</ListItem>
+              </List>
+            </Popover>
           </div>
           <div className="CardCatergory">
             <Link to="/">HOME</Link>

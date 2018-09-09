@@ -9,10 +9,12 @@ import Search from "../page/Search";
 import Status from "../page/Status";
 import Help from "../page/Help";
 import { ResetStyle } from "../style/Reset";
+import { PopStyle } from "../style/Pop";
 
 class App extends Component {
   componentDidMount() {
     ResetStyle();
+    PopStyle();
   }
 
   render() {
