@@ -68,12 +68,14 @@ export const ContentStyle = styled.div`
           height: 1px;
           background-color: ${ColorSet.brightGray};
           content: "";
-          opacity: 0.6;
         }
         a {
           display: inline-block;
+          padding: 0 0.5rem;
+          border-radius: 4px;
+          background-color: ${ColorSet.gray};
           font-size: 0.8125rem;
-          color: ${ColorSet.brightGray};
+          color: ${ColorSet.white};
           text-decoration: none;
           vertical-align: middle;
           line-height: 24px;
@@ -85,7 +87,6 @@ export const ContentStyle = styled.div`
         svg {
           vertical-align: middle;
           color: ${ColorSet.brightGray};
-          opacity: 0.6;
         }
       }
       .CardContent {
