@@ -9,7 +9,10 @@ import IconButton from "@material-ui/core/IconButton";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Typography from "@material-ui/core/Typography";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import Chip from "@material-ui/core/Chip";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import DescriptIcon from "@material-ui/icons/Description";
+import BookmarkIcon from "@material-ui/icons/Bookmark";
 import SmsIcon from "@material-ui/icons/Sms";
 
 import Popover from "@material-ui/core/Popover";
@@ -23,7 +26,33 @@ import BeachAccessIcon from "@material-ui/icons/BeachAccess";
 
 class HomeContent extends Component {
   state = {
-    anchorEl: null
+    anchorEl: null,
+    list: [
+      {
+        info: [
+          {
+            name: "favorite",
+            number: 99,
+            icon: <FavoriteIcon />
+          },
+          {
+            name: "bookmark",
+            number: 99,
+            icon: <BookmarkIcon />
+          },
+          {
+            name: "descript",
+            number: 99,
+            icon: <DescriptIcon />
+          },
+          {
+            name: "comment",
+            number: 99,
+            icon: <SmsIcon />
+          }
+        ]
+      }
+    ]
   };
 
   handleClick = event => {
@@ -72,15 +101,23 @@ class HomeContent extends Component {
             >
               <List>
                 <ListItem>
-                  <Avatar className="icon">
-                    <ImageIcon />
-                  </Avatar>
-                  <ListItemText
-                    primary="potionstory"
-                    secondary="JOIN: 2018.09.10"
-                  />
+                  <ul className="infolist">
+                    {this.state.list[0].info.map((n, i) => {
+                      return (
+                        <li key={i} className={n.name}>
+                          <Chip
+                            className="info"
+                            avatar={<Avatar>{n.icon}</Avatar>}
+                            label={n.number}
+                          />
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </ListItem>
-                <ListItem>좋아요/북마크/게시글/댓글</ListItem>
+                <ListItem>
+                  <Link to="/">DETAIL</Link>
+                </ListItem>
               </List>
             </Popover>
           </div>
