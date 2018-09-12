@@ -68,8 +68,11 @@ class HomeContent extends Component {
     const open = Boolean(anchorEl);
     return (
       <div className="main">
-        <Card className="Card">
-          <div className="CardHeader">
+        <div className="">
+          <h3>공지사항</h3>
+        </div>
+        <Card className="card">
+          <div className="cardHeader">
             <Link to="/">
               <Avatar>
                 <OpacityIcon />
@@ -86,7 +89,7 @@ class HomeContent extends Component {
             </IconButton>
             <Popover
               id="UserInfo"
-              className="PopInfo"
+              className="popInfo"
               open={open}
               anchorEl={anchorEl}
               onClose={this.handleClose}
@@ -121,12 +124,12 @@ class HomeContent extends Component {
               </List>
             </Popover>
           </div>
-          <div className="CardCatergory">
+          <div className="cardCatergory">
             <Link to="/">HOME</Link>
             <ChevronRightIcon />
             <Link to="/">공지사항</Link>
           </div>
-          <CardContent className="CardContent">
+          <CardContent className="cardContent">
             <Link to="/">
               <h4>
                 타이틀
@@ -139,7 +142,7 @@ class HomeContent extends Component {
               </Typography>
             </Link>
           </CardContent>
-          <CardActions className="CardActions">
+          <CardActions className="cardActions">
             <ul>
               <li>
                 <FavoriteIcon />

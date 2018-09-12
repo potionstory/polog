@@ -2,7 +2,7 @@ import { injectGlobal } from "styled-components";
 import { ColorSet } from "./ColorSet";
 
 export const PopStyle = () => injectGlobal`
-  .PopInfo {
+  .popInfo {
     > div + div {
       width: 168px;
       ul {

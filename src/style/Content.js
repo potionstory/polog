@@ -10,10 +10,16 @@ export const ContentStyle = styled.div`
   box-sizing: border-box;
   background-color: ${ColorSet.darkGray};
   color: #fff;
+  h3 {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
   .main {
-    .Card {
+    .card {
       display: inline-block;
-      margin: 1rem;
       max-width: 300px;
       background-color: ${ColorSet.darkGray};
       opacity: 0.6;
@@ -21,7 +27,7 @@ export const ContentStyle = styled.div`
       &:hover {
         opacity: 1;
       }
-      .CardHeader {
+      .cardHeader {
         position: relative;
         padding: 0.5rem;
         background-color: #fff;
@@ -56,7 +62,7 @@ export const ContentStyle = styled.div`
           right: 0.5rem;
         }
       }
-      .CardCatergory {
+      .cardCatergory {
         position: relative;
         padding: 0.5rem;
         background-color: ${ColorSet.white};
@@ -90,7 +96,7 @@ export const ContentStyle = styled.div`
           color: ${ColorSet.lightGray};
         }
       }
-      .CardContent {
+      .cardContent {
         background-color: ${ColorSet.lightGray};
         padding: 0;
         a {
@@ -122,7 +128,7 @@ export const ContentStyle = styled.div`
           }
         }
       }
-      .CardActions {
+      .cardActions {
         display: block;
         padding: 0.5rem;
         background-color: ${ColorSet.blue};
